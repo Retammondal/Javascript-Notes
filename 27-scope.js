@@ -74,7 +74,7 @@ console.log("-------------------------------------------------------------------
 // let, const - block + function scope
 
 console.log("--------------------------------------------------------------------------------------");
-
+// Execution Context Isolation (The Counter Example)
 function counter(){
     let count = 0;
     count = count + 1;
@@ -95,19 +95,3 @@ counter1() // This will output 1
 counter1() // This willl output 2
 counter1() // This willl output 3
 
-
-var x = 6;
-function random(){
-    console.log(x);
-    var x = 3;
-}
-
-random() // will give undefined
-
-var x = 6;
-function random(){
-    console.log(x);
-    let x = 3;
-}
-
-//random() // will give error as x is still not assigned any value
