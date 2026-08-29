@@ -75,61 +75,6 @@ function random2(){
 // random1() // Error? random1 crashes because let blocks access before its line runs
 random2() // Undefined? random2 prints undefined because var initializes early.
 
-console.log("----------------------------------------------------------");
 
-// ###########################################################
-let city = "Delhi";
 
-function printcity(){
-    console.log(city);
-}
 
-function random(fn){
-    let city = "Varanasi";
-    fn()
-}
-
-random(printcity); // printcity is Callback Function
-
-function random3(){
-    let city = "Varanasi";
-    function printcity1(){
-        console.log(city);
-    }
-    printcity1;
-}
-
-random3(); // printcity is Callback Function
-
-console.log("----------------------------------------------------------");
-
-function hello(fun){
-    let city = "Varanasi";
-    function gello(){
-        console.log(city);
-    }
-    return gello
-}
-hello()
-console.log(hello());
-console.log(hello);
-let retam = hello();
-retam()
-console.log("----------------------------------------------------------");
-
-function outer(){
-    function inner(){
-        console.log("HEllo Retam, Its inner function!");
-    }
-    // How can we call inner function only inside outer function , we can't call outside
-    // inner()
-
-    // How to call inner outside
-    return inner // Function Definition, Copy and Return function as it is
-    // return inner() // Functon Call/ Invoke -- Either function call or, Undefined
-}   
-outer()
-console.log(outer); // Output as Function : Outer
-const innerOut = outer()
-// inner function from inside will return inner from outer and gets attached to retam
-innerOut() // calling innerOut but indirectly calling inner() function

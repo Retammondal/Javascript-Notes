@@ -49,6 +49,7 @@ runCallback(printCity);
 console.log("----------------------------------------------------------");
 
 // Lexical Scope
+// Lexical Environment
 // The "One-Way Glass" Metaphor
 // Inner functions can look outward, But outer function can't look inward
 function parentRoom() {

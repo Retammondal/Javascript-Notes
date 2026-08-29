@@ -95,3 +95,20 @@ counter1() // This will output 1
 counter1() // This willl output 2
 counter1() // This willl output 3
 
+console.log("----------------------------------------------------------");
+
+console.log('\nVar Scope Rule');
+let x = 10;
+{
+    let x = 20; // ◀ This stays locked inside this block!
+}
+console.log(x); // Output: 10
+
+var y = 10;
+{ 
+    var y = 20; // Becomes Global
+}
+console.log(y); // Output : 20
+// The curly braces {} create a block scope, 
+// but var completely ignores them. 
+// It treats the var x = 20; inside the block as if it were written out in the open global scope.
