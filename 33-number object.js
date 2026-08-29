@@ -50,6 +50,7 @@ console.log(`Wanting fixed decimal of 2 from ${num1} : `, num1.toFixed(2));
 console.log(`Wanting Total Length of 2 from ${num1} : `, num1.toPrecision(2));
 
 let num2 = 5.35;
+console.log(`Wanting String from ${num2} : `, num2.toString());
 console.log(`Wanting Type String of 2 from ${num2} : `, num2.toString(3));
 
 // NOTE : toFixed, toPrecision Returns as a string
