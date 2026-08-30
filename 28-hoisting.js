@@ -9,6 +9,20 @@
 
 // Temporal Dead Zone -> Time from Variable Creation to Initialization/allocation
 // in this time if we call it, will result to Error
+// ###############################################################################
+
+// Global Execution Context is created here
+let globalVar = "I'm global";
+
+function myFunction() {
+    // A NEW Function Execution Context is created
+    // every time this function is called
+    let localVar = "I'm local";
+    console.log(localVar);
+}
+
+myFunction(); // Function Execution Context #1 created
+myFunction(); // Function Execution Context #2 created (NEW!)
 
 // ###############################################################################
 
@@ -23,13 +37,23 @@
 // var          -> calling it early will result Undefined
 // let, const   -> calling it early will throw Reference Error, b/c value not assigned till now..
 
-console.log(varVar); // will come Undefined WHY? -- we know
-// console.log(letVar); // will come Error
-// console.log(constVar); // will come Error
+// ###############################################################################
 
-let letVar = "Let Variable";
-const constVar = "Const Variable";
-var varVar = "var Variable";
+// Let's trace this code:
+// console.log(a);        // Output: undefined (from Creation Phase)
+// console.log(b);        // ❌ ReferenceError: b is not initialized (TDZ)
+console.log(add(2, 3)); // Output: 5 (add exists from Creation Phase)
+
+var a = 5;            // Execution Phase: a gets value 5
+let b = 10;           // Execution Phase: b gets value 10
+
+function add(x, y) {
+    return x + y;
+}
+
+var fun = function() { // Execution Phase: fun gets function reference
+    console.log("Hello");
+};
 
 console.log("----------------------------------------------------------");
 

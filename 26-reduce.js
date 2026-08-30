@@ -13,7 +13,7 @@ console.log('Get Total Marks using for each - ', totalMarks1);
 // total marks is a single value of integer type
 // .reduce(callback Function, accumulator)
 
-// const totalMarks2 = marks.reduce((accumulator, currentValue) => {},0)
+// const totalMarks2 = marks.reduce((accumulator, currentValue, index) => {},0)
 const totalMarks2 = marks.reduce((accumulator, currentValue) => {
     // return accumulator = accumulator + currentValue
     return accumulator += currentValue
