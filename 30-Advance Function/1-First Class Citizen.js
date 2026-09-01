@@ -14,7 +14,7 @@ function addNum(a,b){
 // just like you would with a number or string.
 
 const addNumRef = addNum;
-// const addNumRef = addNum(); --> It will return the function value not the function itself...
+    // const addNumRef = addNum(); --> It will return the function value not the function itself...
 console.log("\n--- 1. Assigned a Func. to a Variable ---");
 console.log(`Function addNum :`,addNum,`\n=`,`Function addNumRef :`,addNumRef);
 console.log(addNum(5,7));

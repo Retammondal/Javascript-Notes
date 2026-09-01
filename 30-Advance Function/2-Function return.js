@@ -13,13 +13,13 @@ function addNum(a,b){
 }
 console.log("\n--- 1. Directly Calling the Function ---");
 addNum(5,6); 
-// By calling print will happen ✅
-// Returned value will not show ❌
+    // By calling print will happen ✅
+    // Returned value will not show ❌
 
 console.log("\n--- 2. Printing the Call by the Function ---");
-console.log(addNum(6,7)); // --> Directly print the call
-// Prints the inner part ✅
-// prints the return value ✅
+console.log(addNum(6,7));   // --> Directly print the call
+    // Prints the inner part ✅
+    // prints the return value ✅
 console.log(addNum(7,8));
 
 console.log("\n--- 3. Storing the function in var, then print ---");
@@ -63,27 +63,27 @@ function outer() {
     function inner() {
         console.log("Hello from inner!");
     }
-    return inner; // Returns the FUNCTION itself
+    return inner;       // Returns the FUNCTION itself
 }
 
+console.log(outer);     // [Function: outer] - it's a function
 const result = outer();
-console.log(result); // [Function: inner] - it's a function
-result(); // "Hello from inner!" - works!
-console.log(result()); // "Hello from inner!" + undefined (Returns nothing the inner function)
+console.log(result);    // [Function: inner] - it's a function
+result();               // "Hello from inner!" - works!
+console.log(result());  // "Hello from inner!" + undefined (Returns nothing the inner function)
 
 console.log("-----------------------");
 function outer2() {
     function inner() {
         console.log("Hello from inner!");
-        return 42; // inner returns a value
+        return 42;      // inner returns a value
     }
-    return inner; // Executes inner and returns its result
+    return inner;       // Executes inner and returns its result
 }
 
 const result2 = outer2();
-console.log(result2); // [Function: inner] - it's a function
-result2(); 
-// "Hello from inner!" - works! ✅ but print the returned value ❌ 
+console.log(result2);   // [Function: inner] - it's a function
+result2();              // "Hello from inner!" - works! ✅ but print the returned value ❌ 
 console.log(result2()); // "Hello from inner!"✅ + 42, print return value✅
 
 // ----------------------------------------------------------
@@ -95,12 +95,11 @@ console.log("\n--- 3. Returning Function() => Nested Function ---");
 function outer3() {
     function inner() {
         console.log("Hello from inner!");
-        return 42; // inner returns a value
+        return 42;      // inner returns a value
     }
-    return inner(); // Executes inner and returns its result
+    return inner();     // Executes inner and returns its result
 }
 
-const result3 = outer3();
-// Output: "Hello from inner!" - inner was executed!
-console.log(result3); // 42 - the RETURN VALUE of inner
-// result3(); // ❌ Error: result3 is a number, not a function
+const result3 = outer3();   // Output: "Hello from inner!" - inner was executed!
+console.log(result3);       // 42 - the RETURN VALUE of inner
+// result3();               // ❌ Error: result3 is a number, not a function
