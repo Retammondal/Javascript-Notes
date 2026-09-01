@@ -1,5 +1,5 @@
 // Find and searching any element from array 
-arr = [2,5,7,8,9,6,3,4,2]
+const arr = [2,5,7,8,9,6,3,4,2]
 
 //IndexOf is a method to give index (Immutable)
 // if it doesn't find any will give -1
