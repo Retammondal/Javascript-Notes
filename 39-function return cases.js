@@ -80,3 +80,26 @@ console.log(factor.Addition(5));
 /////////////////////////////////////////
 // IMPORTANT IDEA =>
     // Outer function input will be fixed, inner function input can be changed..
+////////////////////////////////////////
+
+console.log("----------------------------------------------------------");
+
+// ---------------------------------------------------------------------------------------------------
+// Case of Returning an Array --> Function...
+// ---------------------------------------------------------------------------------------------------
+
+function outer() {
+    const arr = [];
+    for (let i = 0; i < 3; i++) {
+        arr.push(function() {
+            return i;
+        });
+    }
+    return arr;
+}
+
+const arrFuncs = outer();
+console.log(arrFuncs[0]);       // Return function only : anonymmouse
+console.log(arrFuncs[0]());
+console.log(arrFuncs[1]());
+console.log(arrFuncs[2]());

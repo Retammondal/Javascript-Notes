@@ -1,0 +1,31 @@
+/* Basic resets and styles for practice */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f9;
+}
+
+/* Part 06: Classes to toggle/add via JS */
+.random {
+    border: 2px dashed purple;
+    padding: 10px;
+}
+
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+.large-text {
+    font-size: 24px;
+}
+
+.primary-bg {
+    background-color: #007bff;
+    color: white;
+}
+
+.clone {
+    border: 3px solid green;
+    margin-top: 20px;
+}
