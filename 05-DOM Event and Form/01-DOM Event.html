@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="02-DOM Event.css">
+</head>
+<body>
+    <h1>Heading 1</h1>
+    <h2>Heading 2(1st)</h2>
+    <p>Hello I am Retam Mondal</p>
+    <p>I am a Full Stack Developer</p>
+    <h2>Heading 2(1st)</h2>
+    <p>Also I am Learning Artificial Intelligence</p>
+    <div id="parent-div">
+        <h2>Div 1</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam eum hic nobis vitae labore maxime possimus autem. Earum, ex. Maxime!</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam eum hic nobis vitae labore maxime possimus autem. Earum, ex. Maxime!</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam eum hic nobis vitae labore maxime possimus autem. Earum, ex. Maxime!</p>
+        <div id="child-div">
+            <h2>Div 1 > Div2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, deserunt.</p>
+        </div>
+    </div>
+
+    <div id="btn-div">
+        <button id="btn">Click Here</button>
+        <p class="hidden">Welcome to the Retam's House</p>
+    </div>
+    <!-- Event Propagation  -->
+    <div id="outer">
+        <h2>Event Propagation</h2>
+        <div id="inner">
+            <button id="btn3">Click Me</button>
+        </div>
+    </div>
+
+    <!-- Event Delegation -->
+   <div id="outer2">
+        <h2>Event Delegation</h2>
+        <div id="inner2">
+            <button id="btn4">Button 4</button>
+            <button id="btn5">Button 5</button>
+            <button id="btn6" class="btn-class">Button 6</button>
+        </div>
+    </div>
+     
+
+
+
+
+
+
+
+    <script src="03-Event Listener.js"></script>
+    <script src="04-Event Object.js"></script>
+    <script src="05-Event Propagation.js"></script>
+    <script src="06-Event Delegation.js"></script>
+    <script src="07-Closest Method.js"></script>
+</body>
+</html>
