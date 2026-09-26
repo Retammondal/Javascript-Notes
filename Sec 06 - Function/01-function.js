@@ -2,15 +2,19 @@
 // Function is a reusable block of code
 // DRY (Don't Repeat Yourself) principle
 
+// ------------------------------------------------------------------------------
 // Defining and Calling the Function
-function greet(){  // Defining
+// ------------------------------------------------------------------------------
+
+function greet(){                           // Defining
     console.log("Hello Guys! How are you?");
 }
-greet() //calling
+greet()                                     //calling
 console.log(greet()); 
 // Print of greet() function + undefined due to no print by console.log
 
-console.log("--------------------------------------------------------------------------------------");
+console.log("----------------------------------------------------------");
+
 // Parameter vs Arguement
     // 'name' is the Parameter
 function greetUser(name) {

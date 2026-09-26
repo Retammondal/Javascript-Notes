@@ -1,6 +1,9 @@
 // Array is a Non-Primitive Data Type
 // Zero-based Indexed, Heterogeneous
 
+// --------------------------------------------------------------------------------------------------
+// Basic Characteristics of Array
+// --------------------------------------------------------------------------------------------------
 // An empty array
 let emptyArray = [];
 
@@ -22,28 +25,33 @@ console.log(fruits[9]); //output: undefined
 console.log(fruits.length);
 
 
-console.log("--------------------------------------------------------------------------------------");
+console.log("----------------------------------------------------------");
+
+// --------------------------------------------------------------------------------------------------
 // 4 Core Method
-fruits.push("Hello",56)
-console.log(fruits);
-fruits.pop()
-console.log(fruits);
-fruits.unshift(
+// --------------------------------------------------------------------------------------------------
+
+fruits.push("Hello",56)             // Adds new content to Array at end
+fruits.pop()                        // Remove the Last item
+fruits.unshift(                     // Add Content at beginning
     16,
     "Retam"
 )
-console.log(fruits);
-fruits.shift()
-console.log(fruits);
-console.log("--------------------------------------------------------------------------------------");
+fruits.shift()                      // Remove first content from beginning
+
 
 // Searching
 console.log(fruits.indexOf("Retam"));
 console.log(fruits.indexOf("Apple"));
 console.log(fruits.indexOf("Ban")); // No findings, return -1
-console.log("--------------------------------------------------------------------------------------");
 
+
+console.log("----------------------------------------------------------");
+
+// --------------------------------------------------------------------------------------------------
 // Negative Indexing
+// --------------------------------------------------------------------------------------------------
+
 // like python we can't write [-1] like index
 // Method 1 : Traditional math
 console.log(fruits[fruits.length - 1]); // length will be 6 but last index offered is 5(less by 1)
@@ -52,9 +60,13 @@ console.log(fruits[fruits.length - 2]); // getting 2nd last
 // Method 2 : Modern approach using .at() keyword
 console.log(fruits.at(-3));
 console.log(fruits.at(-4));
-console.log("--------------------------------------------------------------------------------------");
 
+console.log("----------------------------------------------------------");
+
+// --------------------------------------------------------------------------------------------------
 // Nested Array
+// --------------------------------------------------------------------------------------------------
+
 let productsList = [
     ["tshirt", 4999], 
     ["lower", 3999],  
@@ -71,8 +83,12 @@ for(let i = 0; i < productsList.length; i++) {
     console.log(`Product Name is ${name} with price ${price}`);
 }
 
-console.log("--------------------------------------------------------------------------------------");
-// Type of
+console.log("----------------------------------------------------------");
+
+// --------------------------------------------------------------------------------------------------
+// typeof(Array)
+// --------------------------------------------------------------------------------------------------
+
 console.log(typeof productsList);
 console.log(typeof(productsList));
 // Both writing style is valid

@@ -12,10 +12,12 @@ let tools = ['Git', 'Docker', 'Vim'];
 tools.forEach(function(i,j,k){
     console.log(i, j, k);
 })
+// 1st will give current element value
 // 2nd will give by default index value
 // 3rd will give by default array
 
-console.log("--------------------------------------------------------------------------------------");
+console.log("----------------------------------------------------------");
+
 const ranks = ['Gold', 'Silver', 'Bronze'];
 
 ranks.forEach((rank, index) => {

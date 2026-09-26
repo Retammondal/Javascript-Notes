@@ -1,0 +1,29 @@
+// ---------------------------------------------------------------------
+// Looping over Array
+// ---------------------------------------------------------------------
+
+let tools = ['Git', 'Docker', 'Vim'];
+
+// Loops through array items directly
+for (let i of tools) {
+    console.log(i); // Prints: Git, Docker, Vim
+}
+
+// ---------------------------------------------------------------------
+// Looping over String (including spaces)
+// ---------------------------------------------------------------------
+let stringPass = "Retam Mondal";
+
+// Loops through every character, including spaces
+for (let j of stringPass) {
+    console.log(`Each letter: ${j}`);
+}
+
+// ---------------------------------------------------------------------
+// Why ??
+// ---------------------------------------------------------------------
+// If we dont use this; we have to use basic for method ; will be little hectic
+for (i=0; i<tools.length; i++){
+    console.log(tools[i]);
+    console.log("Is it okay?");
+}
