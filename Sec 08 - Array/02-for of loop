@@ -10,16 +10,6 @@ for (let i of tools) {
 }
 
 // ---------------------------------------------------------------------
-// Looping over String (including spaces)
-// ---------------------------------------------------------------------
-let stringPass = "Retam Mondal";
-
-// Loops through every character, including spaces
-for (let j of stringPass) {
-    console.log(`Each letter: ${j}`);
-}
-
-// ---------------------------------------------------------------------
 // Why ??
 // ---------------------------------------------------------------------
 // If we dont use this; we have to use basic for method ; will be little hectic

@@ -10,10 +10,3 @@ for (let key in tools){
     console.log(key, tools[key]);
 }
 
-// ---------------------------------------------------------------------
-// Looping over String
-// ---------------------------------------------------------------------
-let stringPass = "Retam Mondal";
-for (let keyStr in stringPass){
-    console.log(keyStr,"--", stringPass[keyStr]);
-}
