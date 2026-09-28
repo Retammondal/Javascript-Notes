@@ -25,7 +25,7 @@ console.log("It will print after 5s = 5000ms");
 // Solution --> Async Code
 // ------------------------------------------------------------------------------------------------------
 // JS relies on its runtime environment (the Browser or Node.js) to handle heavy tasks asynchronously
-// Async Code - Code runs in Backgroun and Main programme keeps on running
+// Async Code - Code runs in Background and Main programme keeps on running
 
 // ------------------------------------------------------------------------------------------------------
 // Web API's
