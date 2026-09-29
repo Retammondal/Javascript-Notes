@@ -1,27 +1,33 @@
 // Reduce on array of n length 
 // returns single value (number, boolean, object, array)
 
-let marks = [56,58,96,41,52];
-console.log('Marks Given :', marks);
-// want total marks
 
-// Method 01 - Basic using for each
-let totalMarks1 = 0; // intialization
-marks.forEach(mark => totalMarks1+=mark);
+let marks = [56,58,96,41,52];
+// -----------------------------------------------------------------------------
+// Problem --> Want Total Marks ??
+// -----------------------------------------------------------------------------
+console.log('Marks Given :', marks);
+
+// Method 01 - for Each
+
+let totalMarks1 = 0;                            // intialization
+marks.forEach(mark => totalMarks1 += mark);
 console.log('Get Total Marks using for each - ', totalMarks1);
 
-// total marks is a single value of integer type
+// Method 02 - reduce
 // .reduce(callback Function, accumulator)
+// .reduce((accumulator, currentValue, index)=>{},starting value of the accumulator)
 
-// const totalMarks2 = marks.reduce((accumulator, currentValue, index) => {},0)
 const totalMarks2 = marks.reduce((accumulator, currentValue) => {
-    // return accumulator = accumulator + currentValue
     return accumulator += currentValue
 },0)
 console.log('Get Total Marks using reduce - ', totalMarks2);
 
-console.log("--------------------------------------------------------------------------------------");
-// example
+console.log("----------------------------------------------------------");
+
+// -----------------------------------------------------------------------------
+// Problem --> Want All Students Marks Total ??
+// -----------------------------------------------------------------------------
 let students = [
     {
         name: "Retam",
@@ -49,19 +55,20 @@ let students = [
     },
 ]
 
-// want all student marks total
 const totalStudentMarks = students.reduce((total,student) =>{
     return total += student.marks
 },0)
 console.log('Total Marks of all students : ', totalStudentMarks);
 
-console.log("--------------------------------------------------------------------------------------");
+console.log("----------------------------------------------------------");
 
-// example
+// -----------------------------------------------------------------------------
+// Problem --> Want Output like {present : 3, absent : 2} ??
+// -----------------------------------------------------------------------------
+
 const attendance = ["present", "present", "absent" , "present", "present", "absent"]
-// want output like {present : 3, absent : 2}
 
-// Method 01
+// Method 01 - for Each
 let tracker1 = {};
 
 attendance.forEach(value=>{
@@ -75,7 +82,7 @@ attendance.forEach(value=>{
 console.log('Attendance tracking using for each -', tracker1);
 
 // Method 02 - by Reduce
-// const tracker2 = attendance.reduce((acc, value)=>{},{})
+
 const tracker2 = attendance.reduce((acc, value)=>{
     if(acc[value]){
         acc[value] += 1
@@ -87,14 +94,9 @@ const tracker2 = attendance.reduce((acc, value)=>{
 },{})
 console.log('Attendance tracking using Reduce 01 -', tracker2);
 
-const tracker3 = attendance.reduce((acc, value)=>{
-    acc[value] = (acc[value] || 0) + 1;
-    return acc
-},{})
-console.log('Attendance tracking using Reduce 02 -', tracker3);
 
-const tracker4 = attendance.reduce((acc, value)=>{
+const tracker3 = attendance.reduce((acc, value)=>{
     acc[value] += 1
     return acc
 },{present:0, absent:0})
-console.log('Attendance tracking using Reduce 03 -', tracker4);
+console.log('Attendance tracking using Reduce 02 -', tracker3);
