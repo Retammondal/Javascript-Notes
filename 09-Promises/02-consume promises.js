@@ -46,3 +46,12 @@ promise.then(function(value){           // Works on resolve; value = resolve's v
     console.log("Process Done Finally..");
 })
 console.log(promise);
+
+
+// ------------------------------------------------------------------------------------------------------
+// Direct Consume Method
+// ------------------------------------------------------------------------------------------------------
+
+// Only Fulfilled Promise
+Promise.resolve("This is always Fulfilled..").then(val=>{console.log(val);})
+Promise.reject("This is always Rejected..").then(val=>{console.log(val)}).catch(val=>{console.log(val);})
