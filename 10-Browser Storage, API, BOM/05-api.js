@@ -34,7 +34,7 @@ document.querySelector("#github-form").addEventListener("submit", async(e)=>{
     const data = await getUser(username)
 
     document.querySelector("#show-profile").innerHTML = `
-            <img src="${data.avatar_url}" alt="Profile picture of ${data.login}" width="150"> <br>
+            <img src="${data.avatar_url}" alt="Profile picture of ${data.login}" width="250"> <br>
             <i>username : ${data.login}</i>
             <h2>${data.name || data.login}</h2>
             <p>bio : ${data.bio || 'No bio available'}</p>
