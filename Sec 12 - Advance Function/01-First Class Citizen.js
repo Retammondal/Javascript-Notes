@@ -1,7 +1,7 @@
 
-// ==========================================================
+// =======================================================================
 // Function is a First Class Citizen ~ any other value (number, string)
-// ==========================================================
+// =======================================================================
 
 function addNum(a,b){
     return a+b;
@@ -12,11 +12,14 @@ function addNum(a,b){
 // ----------------------------------------------------------
 // We can assign a function reference to a variable, 
 // just like you would with a number or string.
+// NOTE : It's not creating a New Copy, it's just giving a Reference
 
 const addNumRef = addNum;
     // const addNumRef = addNum(); --> It will return the function value not the function itself...
 console.log("\n--- 1. Assigned a Func. to a Variable ---");
-console.log(`Function addNum :`,addNum,`\n=`,`Function addNumRef :`,addNumRef);
+console.log(`Function addNum :`,addNum,`\n=`,`Function addNumRef :`,addNumRef, "-->",
+    addNum === addNumRef
+);
 console.log(addNum(5,7));
 console.log(addNumRef(5,7));
 
@@ -29,7 +32,7 @@ let num1 = 5;
 let num2 = 7;
 let num3 = 9;
 
-console.log("--- 2. Passing to another Function as a Parameter ---");
+console.log("--- 2. Passing to another Function as an Argument ---");
 const addall = addNum(addNum(num1,num2),num3);
 console.log(addall);
 

@@ -37,3 +37,35 @@ function outerStack() {
 }
 
 outerStack();                                   // Pushes outerStack EC on top of Global EC
+
+
+// ------------------------------------------------------------------------------------------------------
+// The Call Stack Visualization
+// ------------------------------------------------------------------------------------------------------
+
+function A() {
+    console.log("A");
+    B();
+}
+
+function B() {
+    console.log("B");
+    C();
+}
+
+function C() {
+    console.log("C");
+}
+
+A();
+
+// Output : A B C
+// Reason
+// 1. Global EC created
+// 2. A() called → Push A EC
+// 3. Inside A, B() called → Push B EC
+// 4. Inside B, C() called → Push C EC
+// 5. C() finishes → Pop C EC
+// 6. B() finishes → Pop B EC
+// 7. A() finishes → Pop A EC
+// 8. Back to Global EC
