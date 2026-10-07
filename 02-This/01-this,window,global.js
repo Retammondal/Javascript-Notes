@@ -1,13 +1,27 @@
-// In Browser
-console.log(this);                  // Window {...}
-console.log(window);                // Window {...}
-console.log(globalThis);            // Window {...}
-console.log(this === window);       // true
-console.log(this === globalThis);   // true
+// ------------------------------------------------------------------------------------------------------
+// The Global Object & 'this': Browser vs. Node.js
+// ------------------------------------------------------------------------------------------------------
+// 'globalThis' was introduced to provide a standard way to access the global object everywhere.
 
-// In Node.js
-console.log(this);                  // {} (empty object in module scope)
-console.log(global);                // Global {...}
-console.log(globalThis);            // Global {...}
-console.log(this === global);       // false (in Node modules!)
-console.log(globalThis === global); // true
+// ---------------------------------------------------------
+// 1. In Browser Environment
+// ---------------------------------------------------------
+console.log(this);                                      // Output: Window {...}
+console.log(window);                                    // Output: Window {...}
+console.log(globalThis);                                // Output: Window {...}
+
+console.log(this === window);                           // Output: true (Global scope 'this' is Window)
+console.log(this === globalThis);                       // Output: true
+
+
+// ---------------------------------------------------------
+// 2. In Node.js Environment
+// ---------------------------------------------------------
+console.log(this);                                      // Output: {} (Empty object!) 
+                                                        // 💡 In Node, top-level 'this' is module.exports
+
+console.log(global);                                    // Output: Object [global] {...}
+console.log(globalThis);                                // Output: Object [global] {...}
+
+console.log(this === global);                           // Output: false ❌ ('this' is NOT global in Node)
+console.log(globalThis === global);                     // Output: true ✅ (globalThis is the standard)
