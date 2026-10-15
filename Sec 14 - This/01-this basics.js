@@ -2,7 +2,7 @@ console.log("----------------------------1------------------------------");
 // ------------------------------------------------------------------------------------------------------
 // Part 1: Lexical Scope vs Object Context ('name' vs 'this.name')
 // ------------------------------------------------------------------------------------------------------
-// Regular Functions: Whenever a method is called, the object on the left side of the dot (.) 
+// Regular Functions: Whenever a method/Function is called, the object on the left side of the dot (.) 
 // becomes the 'this' object.
 
 let name = "Retam";                                 // Global variable

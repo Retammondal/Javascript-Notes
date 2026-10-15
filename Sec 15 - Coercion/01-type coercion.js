@@ -18,6 +18,7 @@ console.log("---------------------------2-------------------------------");
 // 2. Mathematical Operations (-, *, /) -> Converts to Number if Possible(Otherwise NaN)
 //      Boolean --> Number          : 0/1
 //      Object/ Array --> Number    : NaN
+// Special Case : Empty Array [] --> Number : 0
 
 console.log("2" * 4);                                   // Output: 8 (string → number)
 console.log(5 - "10");                                  // Output: -5 (string → number)
@@ -25,7 +26,9 @@ console.log(true + 1);                                  // Output: 2 (true → 1
 console.log(false + 1);                                 // Output: 1 (false → 0)
 console.log(true - true);                               // Output: 0 (1 - 1)
 console.log("Hi" - 6);                                  // Output: NaN ("Hi" can't become a number)
-console.log(["Hi"] - 6);                                  // Output: NaN ("Hi" can't become a number)
+console.log(["Hi"] - 6);                                // Output: NaN ("Hi" can't become a number)
+console.log([] - 6);                                    // Output: -6 (Empty Array --> 0)
+console.log({} - 6);                                    // Output: NaN
 
 
 console.log("---------------------------3-------------------------------");
